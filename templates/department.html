@@ -1,0 +1,43 @@
+{% extends "index.html" %}
+
+{% block title %}Departments{% endblock %}
+
+{% block page_name %}Departments{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    {% load static %}
+    <h2 class="h3 text-center text-dark mb-5">Explore Our Departments</h2>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {% for i in departments %}
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0 rounded-3 overflow-hidden custom-card">
+                <div class="card-body d-flex flex-column">
+                    <div class="text-center mb-3">
+                        <!-- Department Icon -->
+                        {% if i.dep_name == 'Cardiology' %}
+                        <i class="fas fa-heartbeat fa-3x text-danger"></i>
+                        {% elif i.dep_name == 'Neurology' %}
+                        <i class="fas fa-brain fa-3x text-info"></i>
+                        {% elif i.dep_name == 'Paediatrics' %}
+                        <i class="fas fa-baby fa-3x text-warning"></i>
+                        {% elif i.dep_name == 'Psychology' %}
+                        <i class="fa-solid fa-head-side-virus fa-3x text-secondary"></i>
+                        {% else %}
+                        <i class="fas fa-hospital fa-3x text-success"></i>
+                        {% endif %}
+                    </div>
+
+                    <h5 class="card-title text-dark text-center mb-3">{{ i.dep_name }}</h5>
+                    <p class="card-text text-muted text-start flex-grow-1 first-line-indent">{{ i.dep_description }}</p>
+                </div>
+                <div class="card-footer text-muted text-end border-0 pt-2 pb-3 custom-card-footer">
+                    <small>Learn More</small>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,56 @@
+{% extends "index.html" %}
+
+{% block title %}Booking{% endblock %}
+
+{% block page_name %}Booking{% endblock %}
+{% load static %}
+{% block content %}
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-secondary text-white text-center">
+                        <h2 class="h3 py-3">Make An Appointment</h2>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" class="needs-validation text-center" novalidate>
+                            {% csrf_token %}
+                            
+                            <!-- Floating label for Patient Name -->
+                            <div class="mb-3 form-floating">
+                                {{ form.p_name }}
+                                <label for="id_p_name">{{ form.p_name.label }}</label>
+                            </div>
+
+                            <!-- Floating label for Phone Number -->
+                            <div class="mb-3 form-floating">
+                                {{ form.p_phone }}
+                                <label for="id_p_phone">{{ form.p_phone.label }}</label>
+                            </div>
+
+                            <!-- Floating label for Email -->
+                            <div class="mb-3 form-floating">
+                                {{ form.p_email }}
+                                <label for="id_p_email">{{ form.p_email.label }}</label>
+                            </div>
+
+                            <!-- Floating label for Doctor Name -->
+                            <div class="mb-3 form-floating">
+                                {{ form.doc_name }}
+                                <label for="id_doc_name">{{ form.doc_name.label }}</label>
+                            </div>
+
+                            <!-- Floating label for Booking Date -->
+                            <div class="mb-3 form-floating">
+                                {{ form.booking_date }}
+                                <label for="id_booking_date">{{ form.booking_date.label }}</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-50 mt-4"><span class="">Submit</span></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

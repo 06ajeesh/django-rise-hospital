@@ -1,0 +1,86 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.body-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #343a40;
+    color: white;
+    padding: 40px 0;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero {
+    background: url('https://images.unsplash.com/photo-1472289065668-ce650ac443d2?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center;
+    background-size: cover;
+    color: black;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+.nav-link:hover {
+    color: white !important;
+    font-size: 1.1rem;
+    font-weight: 500;
+    background-color: transparent;
+}
+
+/* More specific card hover effect */
+body .custom-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+/* More specific icon hover effect */
+body .custom-card i:hover {
+    transform: scale(1.1) !important;
+    background-color: #007bff !important;
+    color: white !important;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease !important;
+}
+
+/* More specific footer hover effect */
+body .custom-card-footer:hover {
+    color: #007bff !important;
+    cursor: pointer;
+    transition: color 0.3s ease !important;
+}
+/* In your external CSS (style.css) */
+
+p.first-line-indent {
+    text-indent: 1.5rem !important;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+.btn:hover {
+    background-color: #0056b3;
+    transition: background-color 0.3s ease;
+}

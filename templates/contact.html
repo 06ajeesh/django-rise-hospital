@@ -1,0 +1,50 @@
+{% extends "index.html" %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block page_name %}Contact Us{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="h3 text-center text-dark mb-5 fw-bold">Contact Rise Hospital</h2>
+
+    <div class="row">
+        <!-- Contact Information Section -->
+        <div class="col-lg-6 mb-3">
+            <h4 class="fw-bold">Get in Touch</h4>
+            <p class="text-muted py-2">
+                We’d love to hear from you! Whether you have a question about our services or need assistance with anything related to your healthcare, feel free to reach out to us.
+            </p>
+            <ul class="list-unstyled">
+                <li class="mb-2"><strong><i class="fa-solid fa-location-dot me-2"></i> Address:</strong> 123 Rise Avenue, Kozhikode, Kerala, 673581</li>
+                <li class="mb-2"><strong><i class="fa-solid fa-phone me-2"></i> Phone:</strong> +91 831 564 7832</li>
+                <li class="mb-2"><strong><i class="fa-solid fa-envelope me-2"></i> Email:</strong> contact@risehospital.com</li>
+            </ul>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="col-lg-6">
+            <h4 class="fw-bold">Send Us a Message</h4>
+            <form method="POST" action="">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-md py-2"><span class="mx-2">Send Message</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

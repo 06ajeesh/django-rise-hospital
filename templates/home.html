@@ -1,0 +1,103 @@
+{% extends "index.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block page_name %}Welcome Home, Mr. {{name}}{% endblock %}
+
+{% block content %}
+{% load static %}
+
+<!-- Main Container -->
+<div class="container-fluid px-0">
+
+    <!-- Carousel Section -->
+    <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="{% static 'images/car1.jpg' %}" class="d-block w-100" alt="Healthcare Image 1">
+                <div class="carousel-caption d-none d-md-block text-dark">
+                    <h5 class="display-4">Excellence in Healthcare</h5>
+                    <p class="lead">Providing top-notch medical services with compassion and care.</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="{% static 'images/car2.jpg' %}" class="d-block w-100" alt="Healthcare Image 2">
+                <div class="carousel-caption d-none d-md-block text-light">
+                    <h5 class="display-4 fw-semibold">Innovation in Medicine</h5>
+                    <p class="lead fw-semibold">Utilizing the latest medical technology to ensure the best outcomes.</p>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="{% static 'images/car3.jpg' %}" class="d-block w-100" alt="Healthcare Image 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="display-4 fw-semibold">Your Health, Our Priority</h5>
+                    <p class="lead fw-semibold">Caring for you at every step of your health journey.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- New Section for Featured Services -->
+    <section class="my-5">
+        <div class="container text-center">
+            <h2 class="h3 text-dark fw-bold mb-4">Our Services</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Service 1 -->
+                <div class="col">
+                    <div class="card shadow-sm rounded-3 border-0">
+                        <img src="{% static 'images/healthcare.jpg' %}" class="card-img-top" alt="Healthcare Service">
+                        <div class="card-body">
+                            <h5 class="card-title">Comprehensive Care</h5>
+                            <p class="card-text text-muted">Providing holistic care across various medical specialties.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col">
+                    <div class="card shadow-sm rounded-3 border-0">
+                        <img src="{% static 'images/diagnostics.jpg' %}" class="card-img-top" alt="Diagnostic Services">
+                        <div class="card-body">
+                            <h5 class="card-title">Advanced Diagnostics</h5>
+                            <p class="card-text text-muted">Cutting-edge diagnostic tools for accurate results.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col">
+                    <div class="card shadow-sm rounded-3 border-0">
+                        <img src="{% static 'images/emergency.jpg' %}" class="card-img-top" alt="Emergency Services">
+                        <div class="card-body">
+                            <h5 class="card-title">24/7 Emergency</h5>
+                            <p class="card-text text-muted">Always ready to respond to your urgent healthcare needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <div class="container text-center my-5">
+        <h3 class="fw-bold">Your Health Matters to Us!</h3>
+        <p class="lead text-muted">Book an appointment today and take the first step toward better health.</p>
+        <a href="{% url 'booking' %}" class="btn btn-primary btn-md py-2 px-3 fw-semibold shadow-sm">Make an Appointment</a>
+    </div>
+</div>
+
+{% endblock %}

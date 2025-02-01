@@ -1,0 +1,73 @@
+{% extends "index.html" %}
+
+{% block title %}About Us{% endblock %}
+
+{% block page_name %}About Us{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="h3 text-center text-dark mb-5 fw-bold">About Rise Hospital</h2>
+
+    <div class="row mb-5">
+        <!-- About Section - Overview -->
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <h4 class="fw-bold text-secondary">Welcome to Rise Hospital</h4>
+            <p class="text-muted">
+                At Rise Hospital, we are committed to providing the highest quality of healthcare to our patients. Our team of experts is dedicated to offering compassionate care, advanced medical treatment, and a comprehensive range of services to meet the needs of you and your family.
+            </p>
+            <p class="text-muted">
+                We believe in a patient-first approach that puts your well-being at the center of everything we do. From routine checkups to complex medical procedures, we are here to guide you on your journey to better health.
+            </p>
+        </div>
+
+        <!-- About Section - Mission & Vision -->
+        <div class="col-lg-6">
+            <h4 class="fw-bold text-secondary">Our Mission & Vision</h4>
+            <p class="text-muted">
+                <strong class="text-dark">Mission:</strong> To deliver personalized, high-quality healthcare in a compassionate and ethical environment, enhancing the health and well-being of every patient.
+            </p>
+            <p class="text-muted">
+                <strong class="text-dark">Vision:</strong> To be the most trusted healthcare provider in the region, known for innovative treatments, exceptional care, and a commitment to improving the health of our community.
+            </p>
+        </div>
+    </div>
+
+    <!-- Hospital History -->
+    <div class="row mt-5">
+        <div class="col">
+            <h4 class="fw-bold text-secondary">Our History</h4>
+            <p class="text-muted">
+                Founded in 2020, Rise Hospital was born out of the desire to provide accessible and top-notch healthcare in the community. Our hospital started with a vision to not only treat but also educate patients about their health, empowering them to make informed decisions about their well-being.
+            </p>
+            <p class="text-muted">
+                Over the years, we have expanded our services, upgraded our facilities, and added state-of-the-art medical technologies to offer the best care possible. Today, Rise Hospital stands as a beacon of trust, healing, and excellence in healthcare.
+            </p>
+        </div>
+    </div>
+
+    <!-- Core Values -->
+    <div class="row mt-5">
+        <div class="col">
+            <h4 class="fw-bold text-secondary">Our Core Values</h4>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item border-0"><i class="fa-solid fa-handshake me-2 text-primary"></i> Integrity: We maintain the highest standards of professionalism, ethics, and patient care.</li>
+                <li class="list-group-item border-0"><i class="fa-solid fa-heart me-2 text-primary"></i> Compassion: We are dedicated to treating every patient with kindness, respect, and empathy.</li>
+                <li class="list-group-item border-0"><i class="fa-solid fa-flask me-2 text-primary"></i> Innovation: We strive for continuous improvement, using the latest technologies and treatments in healthcare.</li>
+                <li class="list-group-item border-0"><i class="fa-solid fa-star me-2 text-primary"></i> Excellence: We are committed to providing exceptional care, every time, for every patient.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Our Team Section -->
+    <div class="row mt-5">
+        <div class="col text-center">
+            <h4 class="fw-bold text-secondary mb-3">Meet Our Expert Team</h4>
+            <p class="text-muted mb-4">
+                Our dedicated healthcare professionals are the heart of Rise Hospital. With diverse backgrounds and expertise, our doctors, nurses, and staff work together to deliver the best possible care.
+            </p>
+            <a href="{% url 'doctors' %}" class="btn btn-md btn-primary rounded-pill py-3 px-4 fw-bold">Meet the Doctors</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

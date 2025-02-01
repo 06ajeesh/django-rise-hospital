@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+
+{% block title %}Doctors{% endblock %}
+
+{% block page_name %}Doctors{% endblock %}
+
+{% block content %}
+{% load static %}
+<div class="container my-5">
+    <h2 class="h3 text-center text-primary mb-4">Our Doctors</h2>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        {% for i in doctors %}
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0 d-flex flex-column text-center">
+                <div class="card-header text-center p-4">
+                    <!-- Profile Image -->
+                    <img src="{{ i.doc_image.url }}" alt="Doctor Image" class="img-fluid rounded w-75" style="aspect-ratio: 6/5;">
+                </div>
+                <div class="card-body d-flex flex-column text-center">
+                    <h5 class="card-title text-dark fw-bold my-2">Dr. {{ i.doc_name }}</h5>
+                    <p class="card-text text-black  m-0"><strong class="fw-bold">Specialization:</strong> {{ i.doc_spec }}</p>
+                    <p class="card-text text-black  m-0"><strong class="fw-bold">Department:</strong> {{ i.dep_name }} Department</p>
+                </div>
+                <div class="card-footer text-muted text-end border-0">
+                    <small>Click for more info</small>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
