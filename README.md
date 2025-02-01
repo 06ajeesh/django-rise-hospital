@@ -1,0 +1,1 @@
+This is a Django-based web application for Rise Hospital, designed to facilitate patient bookings, showcase doctor profiles, and provide information on hospital departments. Key features include user-friendly booking interfaces, department details, and a contact page. Built using Django and Bootstrap for a responsive design.
